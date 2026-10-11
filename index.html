@@ -1,313 +1,372 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untuk Fatma</title>
-<style>
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: #e9e5df;
-    color: #333;
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.85;
-  }
-
-  .book {
-    width: min(820px, calc(100% - 32px));
-    margin: 40px auto;
-  }
-
-  .page {
-    background: #fffdf8;
-    min-height: 1120px;
-    padding: 75px 78px;
-    margin-bottom: 28px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.12);
-    position: relative;
-    border: 1px solid #eee8dc;
-  }
-
-  .page::before {
-    content: "";
-    position: absolute;
-    inset: 14px;
-    border: 1px solid #e8dfd0;
-    pointer-events: none;
-  }
-
-  .content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .cover {
-    min-height: 1120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .cover h1 {
-    font-size: 42px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
-  }
-
-  .cover p {
-    font-size: 17px;
-    color: #777;
-  }
-
-  h2 {
-    font-size: 25px;
-    font-weight: normal;
-    text-align: center;
-    margin: 0 0 45px;
-  }
-
-  p {
-    margin: 0 0 18px;
-    font-size: 16px;
-  }
-
-  .highlight {
-    text-align: center;
-    font-size: 23px;
-    margin: 35px 0;
-    font-weight: bold;
-  }
-
-  .closing {
-    text-align: center;
-    margin-top: 45px;
-  }
-
-  .page-number {
-    position: absolute;
-    bottom: 35px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 13px;
-    color: #999;
-  }
-
-  @media (max-width: 600px) {
-    .book {
-      width: calc(100% - 18px);
-      margin: 15px auto;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173c32">
+  <meta name="description" content="Sebuah surat kecil yang dibuat khusus untuk Fatma Hadi Puspa Ningrum.">
+  <title>Teruntuk Fatma Hadi Puspa Ningrum</title>
+  <style>
+    :root {
+      --green: #173c32;
+      --green-2: #244f42;
+      --cream: #f7f3e9;
+      --paper: #fffdf7;
+      --gold: #b89b62;
+      --ink: #29352e;
+      --muted: #6f786f;
+      --line: rgba(184, 155, 98, .38);
     }
-
-    .page {
-      padding: 55px 38px;
-      min-height: auto;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: anywhere;
+    }
+    .hero {
+      min-height: 92svh;
+      padding: 76px 22px 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--cream);
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(184,155,98,.16), transparent 48%),
+        linear-gradient(145deg, #102e27, var(--green) 58%, #21483c);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border: 1px solid rgba(184,155,98,.22);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero::before { top: -120px; left: -95px; }
+    .hero::after { bottom: -140px; right: -85px; width: 270px; height: 270px; }
+    .hero-inner { max-width: 760px; position: relative; z-index: 1; }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .24em;
+      font: 11px/1.8 Arial, sans-serif;
+      color: #d5c29a;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: clamp(2.25rem, 7vw, 4.6rem);
+      line-height: 1.17;
+      letter-spacing: -.035em;
+      margin: 0 auto 22px;
+      max-width: 700px;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.6vw, 1.2rem);
+      color: #e3e0d4;
+      margin: 0 auto;
+      max-width: 510px;
+    }
+    .ornament {
+      width: 70px;
+      height: 1px;
+      background: var(--gold);
+      margin: 32px auto;
+      position: relative;
+    }
+    .ornament::after {
+      content: "✦";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -52%);
+      color: var(--gold);
+      background: var(--green);
+      padding: 0 10px;
+      font-size: 12px;
+    }
+    .scroll-note {
+      margin-top: 48px;
+      color: #d5cbb5;
+      font: 10px/1.7 Arial, sans-serif;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    main { padding: 42px 16px 72px; }
+    .letter {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid rgba(184,155,98,.32);
+      box-shadow: 0 18px 60px rgba(29, 48, 38, .07);
+      padding: clamp(24px, 6vw, 64px);
+    }
+    .greeting {
+      font-size: 1.35rem;
+      color: var(--green);
+      margin: 0 0 22px;
+    }
+    .letter p {
+      font-size: clamp(1rem, 2.5vw, 1.075rem);
+      line-height: 1.95;
+      margin: 0 0 1.2em;
+      white-space: normal;
+    }
+    .section-heading {
+      text-align: center;
+      color: var(--green);
+      font-size: clamp(1.45rem, 4.5vw, 2rem);
+      font-weight: 400;
+      line-height: 1.45;
+      margin: 54px 0 12px;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      font: 11px/1.9 Arial, sans-serif;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin: 0 auto 36px !important;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 42px 0;
+      color: var(--gold);
+      font-size: 12px;
+      justify-content: center;
+    }
+    .divider::before, .divider::after {
+      content: "";
+      height: 1px;
+      width: 58px;
+      background: var(--line);
+    }
+    .closing {
+      margin-top: 42px;
+      padding: 35px 16px 12px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    .closing-label {
+      color: var(--muted);
+      font: 10px/1.8 Arial, sans-serif;
+      letter-spacing: .2em;
+      text-transform: uppercase;
       margin-bottom: 18px;
     }
-
-    .page::before { inset: 9px; }
-
-    .cover {
-      min-height: 720px;
-    }
-
-    .cover h1 { font-size: 31px; }
-
-    p { font-size: 15px; }
-
-    h2 { font-size: 22px; margin-bottom: 32px; }
-  }
-
-  @media print {
-    body { background: white; }
-    .book { width: 100%; margin: 0; }
-    .page {
-      box-shadow: none;
+    .closing-title {
+      color: var(--green);
+      font-size: clamp(1.7rem, 6vw, 2.7rem);
+      line-height: 1.3;
+      letter-spacing: .025em;
       margin: 0;
-      page-break-after: always;
-      min-height: 100vh;
+      font-weight: 400;
     }
-  }
-</style>
+    footer {
+      text-align: center;
+      padding: 0 20px 36px;
+      color: #7d8379;
+      font: 11px/1.8 Arial, sans-serif;
+      letter-spacing: .05em;
+    }
+    @media (max-width: 480px) {
+      .hero { min-height: 86svh; padding: 64px 24px 54px; }
+      main { padding: 18px 10px 44px; }
+      .letter { padding: 27px 21px 34px; }
+      .letter p { line-height: 1.9; }
+      .section-heading { margin-top: 42px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
 </head>
-
 <body>
-<div class="book">
-
-  <section class="page cover">
-    <div class="content">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Sebuah surat kecil, khusus untukmu</div>
       <h1>Teruntuk Fatma Hadi Puspa Ningrum</h1>
-      <p>Sesuatu yang sudah lama ingin aku sampaikan.</p>
+      <div class="ornament" aria-hidden="true"></div>
+      <p class="hero-subtitle">Sesuatu yang sudah lama ingin aku sampaikan.</p>
+      <div class="scroll-note">Baca pelan-pelan · dari aku untuk kamu</div>
     </div>
-    <div class="page-number">♡</div>
-  </section>
+  </header>
 
-  <section class="page">
-    <div class="content">
-      <h2>Hallo Fatma</h2>
-     <p>Gimana hari ini? Sehat? Semoga kamu selalu selalu sehat walafiat yaa. Jangan lupa jaga kesehatan juga, jangan terlalu capek.</p>
+  <main>
+    <article class="letter">
+      <h2 class="greeting">Hallo Fatma</h2>
+
+      <p>Gimana hari ini? Sehat? Semoga kamu selalu selalu sehat walafiat yaa. Jangan lupa jaga kesehatan juga, jangan terlalu capek.</p>
 
       <p>Fatma, sengaja bikin ini buat kamu dan maaf ya aku ambil foto kamu buat bikin ini. Setelah bikin ini aku akan hapus semua foto kamu yang aku simpan. Semoga kamu gak marah yaaa hehe, dan semoga kamu nyaman juga.</p>
 
       <p>Jadi langsung intinya aja ya.</p>
 
-      <p>Fatma...
-Ada sedikit hal yang ingin aku sampaikan lewat gift box kecil ini.
+      <p>Fatma...</p>
 
-Sebenarnya aku sempet berpikir cukup lama tentang apa yang ingin aku berikan dan bagaimana cara menyampaikannya. Bukan karena aku ingin membuat sesuatu yang terlalu istimewa, tapi karena aku ingin pemberian ini terasa benar-benar datang dari aku, bukan sekadar hadiah yang diberikan lalu selesai begitu saja.
+      <p>Ada sedikit hal yang ingin aku sampaikan lewat gift box kecil ini.</p>
 
-Mungkin kalau dilihat sekilas, ini cuma sebuah gift box biasa. Tapi di baliknya ada sedikit waktu, perhatian, dan pikiran yang aku luangkan khusus untuk kamu. Aku memilih beberapa hal di dalamnya sambil sesekali mikir, “Kira-kira Fatma suka nggak ya?” Hehe.
+      <p>Sebenarnya aku sempet berpikir cukup lama tentang apa yang ingin aku berikan dan bagaimana cara menyampaikannya. Bukan karena aku ingin membuat sesuatu yang terlalu istimewa, tapi karena aku ingin pemberian ini terasa benar-benar datang dari aku, bukan sekadar hadiah yang diberikan lalu selesai begitu saja.</p>
 
-Entah nanti tebakan aku benar atau malah meleset jauh. Kalo ada yang ternyata nggak sesuai selera kamu, anggap aja aku masih dalam tahap belajar memahami kamu. Jadi jangan langsung kasih nilai jelek ya. 😄
+      <p>Mungkin kalau dilihat sekilas, ini cuma sebuah gift box biasa. Tapi di baliknya ada sedikit waktu, perhatian, dan pikiran yang aku luangkan khusus untuk kamu. Aku memilih beberapa hal di dalamnya sambil sesekali mikir, “Kira-kira Fatma suka nggak ya?” Hehe.</p>
 
-Aku nggak memberikan ini karena ada hari spesial atau karena aku sedang punya alasan tertentu yang mengharuskan aku memberikan hadiah. Aku cuma sedang pengen ngasih sesuatu kepada seseorang yang menurut aku cukup berarti.
+      <p>Entah nanti tebakan aku benar atau malah meleset jauh. Kalo ada yang ternyata nggak sesuai selera kamu, anggap aja aku masih dalam tahap belajar memahami kamu. Jadi jangan langsung kasih nilai jelek ya. 😄</p>
 
-Kadang memang nggak perlu menunggu hari ulang tahun, hari istimewa, atau momen tertentu untuk memberikan sesuatu. Kalo memang pengen mngasih perhatian, ya kenapa harus menunggu?
+      <p>Aku nggak memberikan ini karena ada hari spesial atau karena aku sedang punya alasan tertentu yang mengharuskan aku memberikan hadiah. Aku cuma sedang pengen ngasih sesuatu kepada seseorang yang menurut aku cukup berarti.</p>
 
-Dan mungkin ini salah satu cara aku menunjukkan perhatian itu.
+      <p>Kadang memang nggak perlu menunggu hari ulang tahun, hari istimewa, atau momen tertentu untuk memberikan sesuatu. Kalo memang pengen mngasih perhatian, ya kenapa harus menunggu?</p>
 
-Aku juga nggak pengen kamu ngerasa bahwa gift box ini harus dibalas dengan sesuatu. Nggak perlu memikirkan harus memberikan apa atau harus mengatakan apa. Aku memberikan ini karena aku memang ingin memberikannya.
+      <p>Dan mungkin ini salah satu cara aku menunjukkan perhatian itu.</p>
 
-Kalo kamu seneng, aku udah ikut senang.
+      <p>Aku juga nggak pengen kamu ngerasa bahwa gift box ini harus dibalas dengan sesuatu. Nggak perlu memikirkan harus memberikan apa atau harus mengatakan apa. Aku memberikan ini karena aku memang ingin memberikannya.</p>
 
-Kalo kamu tersenyum ketika melihat isinya, berarti udah berhasil.
+      <p>Kalo kamu seneng, aku udah ikut senang.</p>
 
-Kalo sampai kamu bilang, “Kok bisa kepikiran begini?” mungkin aku akan pura-pura biasa saja, padahal sebenarnya senang juga. Hehe.
+      <p>Kalo kamu tersenyum ketika melihat isinya, berarti udah berhasil.</p>
 
-Karena buat aku, yang paling penting bukan seberapa besar pemberian ini, tapi bagaimana sesuatu yang sederhana bisa menjadi sebuah kenangan kecil yang menyenangkan.
+      <p>Kalo sampai kamu bilang, “Kok bisa kepikiran begini?” mungkin aku akan pura-pura biasa saja, padahal sebenarnya senang juga. Hehe.</p>
 
-Aku nggak tau nantinya kamu akan menyimpen gift box ini atau hanya mengingatnya sebentar. Aku juga nggak tau apakah suatu hari nanti kamu akan melihat kembali tulisan ini dan tersenyum karena mengingat momen ketika kamu menerimanya.
+      <p>Karena buat aku, yang paling penting bukan seberapa besar pemberian ini, tapi bagaimana sesuatu yang sederhana bisa menjadi sebuah kenangan kecil yang menyenangkan.</p>
 
-Tapi kalo itu sampe terjadi, menurut aku udah cukup.
+      <p>Aku nggak tau nantinya kamu akan menyimpen gift box ini atau hanya mengingatnya sebentar. Aku juga nggak tau apakah suatu hari nanti kamu akan melihat kembali tulisan ini dan tersenyum karena mengingat momen ketika kamu menerimanya.</p>
 
-Karena setidaknya pernah ada satu waktu di mana aku mencoba membuat kamu merasa diperhatikan.
+      <p>Tapi kalo itu sampe terjadi, menurut aku udah cukup.</p>
 
-Dan jujur, ada alasan kenapa aku ingin memberikan ini kepada kamu.
+      <p>Karena setidaknya pernah ada satu waktu di mana aku mencoba membuat kamu merasa diperhatikan.</p>
 
-Aku suka sama kamu,Fatma. Aku seneng ketika bisa ngobrol dengan kamu walaupun di virtual. Ada rasa pengen tau yang membuat aku ingin mengenal kamu lebih jauh, bukan hanya sekadar tau nama atau sekedar pernah ngobrol.
+      <p>Dan jujur, ada alasan kenapa aku ingin memberikan ini kepada kamu.</p>
 
-Pelan pelan, tanpa aku sadari, rasa suka itu berubah menjadi sesuatu yang sedikit lebih dalam.
+      <p>Aku suka sama kamu,Fatma. Aku seneng ketika bisa ngobrol dengan kamu walaupun di virtual. Ada rasa pengen tau yang membuat aku ingin mengenal kamu lebih jauh, bukan hanya sekadar tau nama atau sekedar pernah ngobrol.</p>
 
-Aku nggak mau menyebutnya terlalu banyak di bagian ini, karena nanti kamu malah kabur setelah membaca beberapa paragraf pertama. 😄
+      <p>Pelan pelan, tanpa aku sadari, rasa suka itu berubah menjadi sesuatu yang sedikit lebih dalam.</p>
 
-Aku cuma pengen kamu tau bahwa gift box ini memang ada sedikit bagian dari perasaan aku di dalamnya.
+      <p>Aku nggak mau menyebutnya terlalu banyak di bagian ini, karena nanti kamu malah kabur setelah membaca beberapa paragraf pertama. 😄</p>
 
-Bukan untuk membuat kamu merasa harus membalasnya.
+      <p>Aku cuma pengen kamu tau bahwa gift box ini memang ada sedikit bagian dari perasaan aku di dalamnya.</p>
 
-Bukan untuk membuat kamu harus ngasih jawaban.
+      <p>Bukan untuk membuat kamu merasa harus membalasnya.</p>
 
-Aku hanya pengen ngasih sesuatu yang berasal dari niat baik, untuk seseorang yang belakangan ini cukup sering ada di pikiran aku.
+      <p>Bukan untuk membuat kamu harus ngasih jawaban.</p>
 
-Jadi, kalo nanti kamu membuka satu per satu isinya, semoga kamu bisa menikmatinya.
+      <p>Aku hanya pengen ngasih sesuatu yang berasal dari niat baik, untuk seseorang yang belakangan ini cukup sering ada di pikiran aku.</p>
 
-Dan kalo ada satu hal yang aku harapkan dari semua ini, sederhana aja:
+      <p>Jadi, kalo nanti kamu membuka satu per satu isinya, semoga kamu bisa menikmatinya.</p>
 
-Semoga gift box kecil ini bisa membuat kamu tersenyum.
+      <p>Dan kalo ada satu hal yang aku harapkan dari semua ini, sederhana aja:</p>
 
-Walaupun cuma sebentar.
+      <p>Semoga gift box kecil ini bisa membuat kamu tersenyum.</p>
 
-Karena kalo aku bisa menjadi salah satu alasan kamu tersenyum hari ini, menurut aku itu sudah cukup menyenangkan.
+      <p>Walaupun cuma sebentar.</p>
 
-Dan mungkin... masih ada sedikit cerita lain yang belum aku sampaikan.
-</p>
-     
-      <div class="highlight">Fatma...<br>MAY THIS GIFTBOX BE THE REASON YOU SMILE.</div>
+      <p>Karena kalo aku bisa menjadi salah satu alasan kamu tersenyum hari ini, menurut aku itu sudah cukup menyenangkan.</p>
 
-      <p>Dan akhirnya, sampai juga di bagian terakhir dari tulisan ini.<p>
+      <p>Dan mungkin... masih ada sedikit cerita lain yang belum aku sampaikan.</p>
 
-</p>Setelah semua yang aku tulis, mungkin kamu sekarang sudah sedikit mengerti kenapa aku menyiapkan gift box ini untuk kamu. Sebenarnya aku nggak berharap hadiah ini menjadi sesuatu yang besar. Aku cuma ingin memberikan sedikit warna di hari kamu, sesuatu yang sederhana yang mudah-mudahan bisa membuat kamu senang walaupun hanya sebentar.
+      <div class="divider" aria-hidden="true">✦</div>
 
-Aku tau mungkin akhir-akhir ini kamu sedang lebih memilih untuk fokus pada diri sendiri, menata kembali banyak hal, dan memberikan waktu untuk diri kamu sendiri. Menurut aku, itu nggak apa-apa. Setiap orang punya waktunya masing-masing untuk kembali merasa baik-baik saja.
+      <h2 class="section-heading">MAY THIS GIFTBOX BE THE REASON YOU SMILE.</h2>
+      <p class="section-subtitle">Sedikit harapan untuk kamu</p>
 
-Jadi nggak perlu merasa harus buru buru.
+      <p>Dan akhirnya, sampai juga di bagian terakhir dari tulisan ini.</p>
 
-Nggak perlu memaksakan diri untuk selalu terlihat baik baik aja.
+      <p>Setelah semua yang aku tulis, mungkin kamu sekarang sudah sedikit mengerti kenapa aku menyiapkan gift box ini untuk kamu. Sebenarnya aku nggak berharap hadiah ini menjadi sesuatu yang besar. Aku cuma ingin memberikan sedikit warna di hari kamu, sesuatu yang sederhana yang mudah-mudahan bisa membuat kamu senang walaupun hanya sebentar.</p>
 
-Kalo memang ada hari di mana kamu ingin sendiri, istirahatlah. Kalo ada hari di mana kamu ingin banyak tertawa, tertawalah. Kalau ada hari di mana kamu cuma ingin menjalani semuanya dengan tenang, jalani saja dengan tenang.
+      <p>Aku tau mungkin akhir-akhir ini kamu sedang lebih memilih untuk fokus pada diri sendiri, menata kembali banyak hal, dan memberikan waktu untuk diri kamu sendiri. Menurut aku, itu nggak apa-apa. Setiap orang punya waktunya masing-masing untuk kembali merasa baik-baik saja.</p>
 
-Aku cuma berharap, di tengah proses kamu menjalani semuanya, kamu tetap ingat untuk menjaga diri sendiri.
+      <p>Jadi nggak perlu merasa harus buru buru.</p>
 
-Jangan terlalu keras sama diri kamu sendiri ya.
+      <p>Nggak perlu memaksakan diri untuk selalu terlihat baik baik aja.</p>
 
-Kamu juga berhak mendapatkan waktu untuk istirahat, berhak merasa tenang, dan berhak menikmati hal-hal kecil yang bisa membuat kamu bahagia.
+      <p>Kalo memang ada hari di mana kamu ingin sendiri, istirahatlah. Kalo ada hari di mana kamu ingin banyak tertawa, tertawalah. Kalau ada hari di mana kamu cuma ingin menjalani semuanya dengan tenang, jalani saja dengan tenang.</p>
 
-Semoga apa pun yang sedang kamu lewati sekarang, perlahan bisa menjadi lebih ringan.
+      <p>Aku cuma berharap, di tengah proses kamu menjalani semuanya, kamu tetap ingat untuk menjaga diri sendiri.</p>
 
-Semoga hari-hari kamu ke depannya dipenuhi lebih banyak hal baik.
+      <p>Jangan terlalu keras sama diri kamu sendiri ya.</p>
 
-Semoga hati kamu juga diberikan ruang yang cukup untuk kembali merasa nyaman dan tenang.
+      <p>Kamu juga berhak mendapatkan waktu untuk istirahat, berhak merasa tenang, dan berhak menikmati hal-hal kecil yang bisa membuat kamu bahagia.</p>
 
-Dan semoga kamu bisa menemukan kembali banyak alasan untuk tersenyum, bukan karena harus terlihat bahagia di depan orang lain, tapi karena memang kamu benar-benar merasa bahagia dari dalam diri kamu sendiri.
+      <p>Semoga apa pun yang sedang kamu lewati sekarang, perlahan bisa menjadi lebih ringan.</p>
 
-Aku juga berharap gift box kecil ini bisa menjadi salah satu hal sederhana yang membuat kamu tersenyum hari ini.
+      <p>Semoga hari-hari kamu ke depannya dipenuhi lebih banyak hal baik.</p>
 
-Mungkin nanti ada satu benda di dalamnya yang kamu suka, mungkin ada sesuatu yang membuat kamu bilang, “Oh, ini lucu,” atau mungkin kamu malah ketawa sendiri karena melihat sesuatu yang nggak kamu sangka ada di dalamnya. 😄
+      <p>Semoga hati kamu juga diberikan ruang yang cukup untuk kembali merasa nyaman dan tenang.</p>
 
-Apa pun reaksimu, aku harap kamu menikmatinya.
+      <p>Dan semoga kamu bisa menemukan kembali banyak alasan untuk tersenyum, bukan karena harus terlihat bahagia di depan orang lain, tapi karena memang kamu benar-benar merasa bahagia dari dalam diri kamu sendiri.</p>
 
-Nggak perlu memikirkan apakah hadiah ini terlalu sederhana atau apakah kamu harus membalasnya dengan sesuatu. Simpan saja apa yang memang ingin kamu simpan, gunakan apa yang memang bisa kamu gunakan, dan kalau ada yang membuat kamu tersenyum, berarti tujuan kecil aku sudah tercapai.
+      <p>Aku juga berharap gift box kecil ini bisa menjadi salah satu hal sederhana yang membuat kamu tersenyum hari ini.</p>
 
-Aku juga nggak tahu gift box ini nantinya akan kamu ingat sampai kapan.
+      <p>Mungkin nanti ada satu benda di dalamnya yang kamu suka, mungkin ada sesuatu yang membuat kamu bilang, “Oh, ini lucu,” atau mungkin kamu malah ketawa sendiri karena melihat sesuatu yang nggak kamu sangka ada di dalamnya. 😄</p>
 
-Mungkin beberapa hari.
+      <p>Apa pun reaksimu, aku harap kamu menikmatinya.</p>
 
-Mungkin beberapa bulan.
+      <p>Nggak perlu memikirkan apakah hadiah ini terlalu sederhana atau apakah kamu harus membalasnya dengan sesuatu. Simpan saja apa yang memang ingin kamu simpan, gunakan apa yang memang bisa kamu gunakan, dan kalau ada yang membuat kamu tersenyum, berarti tujuan kecil aku sudah tercapai.</p>
 
-Atau mungkin suatu saat nanti kamu melihatnya lagi dan lupa siapa yang memberikan. Hehe.
+      <p>Aku juga nggak tahu gift box ini nantinya akan kamu ingat sampai kapan.</p>
 
-Tapi nggak apa apa.
+      <p>Mungkin beberapa hari.</p>
 
-Karena buat aku, yang penting saat hadiah ini sampai ke tangan kamu, ada sedikit kebahagiaan yang ikut sampai bersamanya.
+      <p>Mungkin beberapa bulan.</p>
 
-Dan untuk kamu sendiri, aku cuma punya beberapa doa sederhana.
+      <p>Atau mungkin suatu saat nanti kamu melihatnya lagi dan lupa siapa yang memberikan. Hehe.</p>
 
-Semoga kamu selalu diberikan kesehatan.
+      <p>Tapi nggak apa apa.</p>
 
-Semoga langkah kamu ke depan dimudahkan.
+      <p>Karena buat aku, yang penting saat hadiah ini sampai ke tangan kamu, ada sedikit kebahagiaan yang ikut sampai bersamanya.</p>
 
-Semoga apa pun yang sedang kamu usahakan bisa berjalan dengan baik.
+      <p>Dan untuk kamu sendiri, aku cuma punya beberapa doa sederhana.</p>
 
-Semoga kamu selalu dikelilingi orang orang yang tulus dan benar-benar menghargai kamu.
+      <p>Semoga kamu selalu diberikan kesehatan.</p>
 
-Semoga kamu diberikan kekuatan untuk melewati hari hari yang nggak mudah.
+      <p>Semoga langkah kamu ke depan dimudahkan.</p>
 
-Dan semoga setelah semua hal yang pernah membuat kamu lelah, nanti akan datang lebih banyak hal yang membuat kamu merasa bahwa hidup ini ternyata masih punya banyak sisi baik untuk dinikmati.
+      <p>Semoga apa pun yang sedang kamu usahakan bisa berjalan dengan baik.</p>
 
-Nggak perlu terburu-buru mencari kebahagiaan.
+      <p>Semoga kamu selalu dikelilingi orang orang yang tulus dan benar-benar menghargai kamu.</p>
 
-Nikmati saja prosesnya, pelan-pelan.
+      <p>Semoga kamu diberikan kekuatan untuk melewati hari hari yang nggak mudah.</p>
 
-Rawat diri kamu baik baik.
+      <p>Dan semoga setelah semua hal yang pernah membuat kamu lelah, nanti akan datang lebih banyak hal yang membuat kamu merasa bahwa hidup ini ternyata masih punya banyak sisi baik untuk dinikmati.</p>
 
-Karena sebelum memikirkan banyak hal dan banyak orang, kamu juga harus inget bahwa diri kamu sendiri pantas untuk dijaga.
+      <p>Nggak perlu terburu-buru mencari kebahagiaan.</p>
 
-Terakhir, terima kasih karena sudah menerima gift box kecil ini.
+      <p>Nikmati saja prosesnya, pelan-pelan.</p>
 
-Terima kasih juga karena sudah meluangkan waktu untuk membaca tulisan yang mungkin ternyata lebih panjang dari perkiraan kamu. 😄
+      <p>Rawat diri kamu baik baik.</p>
 
-Semoga kamu nggak bosan bacanya sampai akhir.
+      <p>Karena sebelum memikirkan banyak hal dan banyak orang, kamu juga harus inget bahwa diri kamu sendiri pantas untuk dijaga.</p>
 
-Dan semoga, dari semua yang aku tulis di sini, ada setidaknya satu kalimat yang bisa membuat kamu tersenyum.
+      <p>Terakhir, terima kasih karena sudah menerima gift box kecil ini.</p>
 
-Jaga diri baik baik ya, Fatma.
+      <p>Terima kasih juga karena sudah meluangkan waktu untuk membaca tulisan yang mungkin ternyata lebih panjang dari perkiraan kamu. 😄</p>
 
-Semoga setelah ini, hari hari kamu dipenuhi lebih banyak ketenangan, lebih banyak senyum, dan tentunya lebih banyak hal baik.
+      <p>Semoga kamu nggak bosan bacanya sampai akhir.</p>
 
-Semoga kamu bahagia.
+      <p>Dan semoga, dari semua yang aku tulis di sini, ada setidaknya satu kalimat yang bisa membuat kamu tersenyum.</p>
 
-Bukan hanya hari ini, tapi juga untuk hari hari yang akan datang. 🤍</p>
+      <p>Jaga diri baik baik ya, Fatma.</p>
+
+      <p>Semoga setelah ini, hari hari kamu dipenuhi lebih banyak ketenangan, lebih banyak senyum, dan tentunya lebih banyak hal baik.</p>
+
+      <p>Semoga kamu bahagia.</p>
+
+      <p>Bukan hanya hari ini, tapi juga untuk hari hari yang akan datang.</p>
 
       <div class="closing">
-        <p>SAYANG KAMU FATMAA. 🤍💝</p>
+        <div class="closing-label">Dengan tulus, untuk kamu</div>
+        <h2 class="closing-title">SAYANG KAMU FATMAA.</h2>
       </div>
-    </div>
-    <div class="page-number">1</div>
-  </section>
+    </article>
+  </main>
 
-</div>
+  <footer>Dibuat dengan niat baik, khusus untuk Fatma.</footer>
 </body>
 </html>
